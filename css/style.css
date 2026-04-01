@@ -186,6 +186,37 @@ h2 {
     font-size: 2vw;
 }
 
+
+/* New homework */
+button {
+    display: block;
+    padding: 10px 16px;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: #4b3621;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+#dataContainer div {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 12px;
+    border-radius: 8px;
+}
+
+#errorMessage {
+    color: red;
+}
+
+#dataContainer img {
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
 /** Cards for features**/
 
 /** Card 1 **/

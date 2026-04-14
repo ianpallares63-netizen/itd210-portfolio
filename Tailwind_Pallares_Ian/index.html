@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>★ Web Portfolio</title>
+</head>
+
+<body class="bg-[#5d945b] text-gray-900">
+
+    <!-- This TailWind is really hard, I mean is similar to CSS in somee aspects, but it feels confusing and different, it feels and sees as a dissaster without organization -->
+
+    <!-- ═══════════ NAVIGATION ═══════════ -->
+    <header class="bg-[#aebb85] shadow-sm sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-6
+            flex justify-between items-center py-4">
+            <a href="#" class="text-xl font-bold text-blue-600
+                hover:text-blue-800 transition-colors duration-200">
+                ★ Ian Pallares
+            </a>
+            <ul class="hidden md:flex gap-8
+                        text-sm font-medium text-[#5d945b]">
+                <li><a href="#projects" class="hover:text-blue-600 transition-colors duration-150 bg-[#494e94] px-8 py-3 rounded-lg hover:bg-[#6e3c91] hover:scale-110 transition-transform duration-300">Projects</a></li>
+                <li><a href="#about" class="hover:text-blue-600 transition-colors duration-150 bg-[#494e94] px-8 py-3 rounded-lg hover:bg-[#6e3c91] hover:scale-110 transition-transform duration-300">About</a></li>
+                <li><a href="#contact" class="hover:text-blue-600 transition-colors duration-150 bg-[#494e94] px-8 py-3 rounded-lg hover:bg-[#6e3c91] hover:scale-110 transition-transform duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- I have been trying to play with the different Tailwind classes i have seen on this template, but it's a bit overwhelming seeing them all. I really prefer CSS due to its simplicity and organization-->
+
+    <main>
+        
+        <!-- ═══════════ HERO ═══════════ -->
+        <section class="bg-gradient-to-br from-[#5d945b] to-[#a2bc82] text-white
+                        py-24 px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <span class="text-[#0b87bc] text-2xl font-semibold text-sm uppercase tracking-widest">
+                    Web and Multimedia · NOVA
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl
+                            font-extrabold mt-4 mb-6 leading-tight">
+                    Hi, I'm <span class="text-[#6e3c91]">★ Ian Pallares</span>
+                </h1>
+                <p class="text-lg text-[#0b87bc] leading-relaxed mb-10">
+                    ★ I am a passionate web developer and multimedia designer. I love creating beautiful, functional websites and engaging digital content.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects" class="bg-[#494e94] hover:bg-[#6e3c91] hover:scale-110 transition-transform duration-300 text-white
+                    font-semibold px-8 py-3 rounded-lg
+                    transition-colors duration-200">
+                        View My Projects
+                    </a>
+                    <a href="#about" class="border border-gray-600 hover:border-white
+                    text-gray-300 hover:text-white font-semibold
+                    px-8 py-3 rounded-lg transition-all duration-200">
+                        About Me
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ CARDS ═══════════ -->
+        <section id="projects" class="py-20 bg-gradient-to-br from-[#494e94] to-[#6e408b] px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold text-[#0b87bc] text-center mb-12">
+                    My Projects
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- CARD — copy and repeat × 3 -->
+                    <article class="bg-white rounded-2xl shadow-md
+                                    hover:shadow-xl hover:-translate-y-1
+                                    transition-all duration-300 overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600">
+                            <!-- ★ Replace div with img when you have a screenshot:
+                    <img src="images/project1.jpg"
+                        class="w-full h-full object-cover"
+                        alt="Project 1" /> -->
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                                ★ Category
+                            </span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-3 mb-2">
+                                ★ Still Brew
+                            </h3>
+                            <p class="text-sm text-gray-500 leading-relaxed mb-4">
+                                ★ This is a project i built for one of my classes. It is dedicated to highlight a coffee shop's menu and atmosphere. I leanred how to use HTML and CSS to create a visually appealing website that showcases the coffee shop's offerings and ambiance.
+                            </p>
+                            <a href="#" class="text-sm font-semibold text-blue-600
+                        hover:text-blue-800 transition-colors duration-150">
+                                View Live Site →
+                            </a>
+                        </div>
+                    </article>
+
+    <!-- I have been playing a bit with the colors and hover properties, making gradients on TailWind is quite confortable. Despite TailWind's confusing structure, it seems to be a powerful tool, its like a CSS "Shortcut" but it still feel overwhelming-->
+
+                    <article class="bg-white rounded-2xl shadow-md
+                                    hover:shadow-xl hover:-translate-y-1
+                                    transition-all duration-300 overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600">
+                            
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                                ★ Category
+                            </span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-3 mb-2">
+                                ★ Cancerbero's website
+                            </h3>
+                            <p class="text-sm text-gray-500 leading-relaxed mb-4">
+                                ★ This was my first project that I built for one of my classes. It is a website dedicated to showcase the discography of a Venezuelan rapper called "Cancerbero". I learned how to use HTML and CSS to create a responsive and visually appealing website that highlights the artist's music and legacy.
+                            </p>
+                            <a href="#" class="text-sm font-semibold text-blue-600
+                        hover:text-blue-800 transition-colors duration-150">
+                                View Live Site →
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-2xl shadow-md
+                                    hover:shadow-xl hover:-translate-y-1
+                                    transition-all duration-300 overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600">
+                            
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                                ★ Category
+                            </span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-3 mb-2">
+                                ★ BIO
+                            </h3>
+                            <p class="text-sm text-gray-500 leading-relaxed mb-4">
+                                ★ This is a website i am still working on, this project is dedicated to demostrate the differents biomes that exist in the world. I am learning how to use JavaScript to create a more interactive and dynamic website that educates users about the various biomes and their unique characteristics.
+                            </p>
+                            <a href="#" class="text-sm font-semibold text-blue-600
+                        hover:text-blue-800 transition-colors duration-150">
+                                View Live Site →
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!-- ═══════════ CONTACT FORM ═══════════ -->
+        <section id="contact" class="py-20 px-4 bg-gradient-to-br from-[#0b87bc] to-[#47c0f0]">
+            <div class="max-w-lg mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+                <p class="text-gray-500 mb-8">★ Lets Talk!.</p>
+                <input type="text" placeholder="Your name" class="w-full px-4 py-3 rounded-lg border border-gray-300
+                        focus:outline-none focus:border-blue-500
+                        focus:ring-2 focus:ring-blue-200
+                        transition-all duration-200 mb-3" />
+                <input type="email" placeholder="Your email" class="w-full px-4 py-3 rounded-lg border border-gray-300
+                        focus:outline-none focus:border-blue-500
+                        focus:ring-2 focus:ring-blue-200
+                        transition-all duration-200 mb-4" />
+                <button class="w-full bg-yellow-600 hover:bg-orange-700
+                    text-white font-semibold py-3 rounded-lg
+                    transition-colors duration-200
+                    hover:scale-110 transition-transform duration-300">
+                    Send Message
+                </button>
+            </div>
+        </section>
+    <!-- I must say that I still prefer CSS over Tailwind-->
+    </main>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-8">
+        <p class="text-sm">
+            &copy; 2025 ★ Ian Pallares &mdash;
+            Web and Multimedia &middot; NOVA Annandale
+        </p>
+    </footer>
+
+</body>
+
+</html>

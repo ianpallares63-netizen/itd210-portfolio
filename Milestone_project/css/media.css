@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFDF5;
+    overflow-x: hidden;
+}
+
+/** Navbar **/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 2vw;
+    color: #3E2723;
+    background-color: white;
+}
+.brand {
+    font-size: 5vw;
+    font-weight: bold;
+    font-family: "Faculty Glyphic", sans-serif;
+}
+
+/* Mobile nav */
+
+/*This is the nav for mobile devices */
+#primary-nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    z-index: 4;
+    border-bottom: 2px solid #3E2723;
+    list-style: none;
+}
+
+/* I have been having problems with the first mobile approach due to the navbar, the error happened because i reused some code and i forgot to erase the things i didn't need more jajajajaja */
+
+#primary-nav.active a {
+    display: block;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-family: "Faculty Glyphic", sans-serif;
+    /* Change the font later */
+    text-decoration: none;
+    color: #3E2723;
+}
+
+nav {
+    display: none;
+}
+
+
+.nav-item {
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: #869d7a;
+    border-radius: 8px;
+    transition: color 0.5s ease, background-color 0.30s ease
+}
+
+/* Hamburger (hidden on desktop) */
+.menu-toggle {
+    display: inline-block;
+    background: transparent;
+    border: 0;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #3E2723;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+
+footer {
+    background: #3E2723;
+    color: #FFFDF5;
+    text-align: center;
+    padding: 1vw;
+    font-size: 12px;
+    font-family: "Faculty Glyphic", sans-serif;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <!-- The name of the website can change on a future-->
+            <span class="brand">Still brew</span>
+
+            <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav id="primary-nav" aria-label="Main navigation">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item">About</a>
+                <a href="gallery.html" class="nav-item">Gallery</a>
+                <a href="media.html" class="nav-item">Media</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </nav>
+        </div>
+    </header>
+<main>
+        <h2>Our Atmosphere</h2>
+        <div class="photo-grid">
+            <div class="photo-card"><img src="images/example.jpg" alt="Shop"></div>
+            <div class="photo-card"><img src="images/example.jpg" alt="Coffee"></div>
+            <div class="photo-card"><img src="images/example.jpg" alt="Brewing"></div>
+            <div class="photo-card"><img src="images/example.jpg" alt="Food"></div>
+        </div>
+
+        <section class="brewing-techniques">
+            <h2>Brewing Techniques</h2>
+            <div class="techniques">
+                <div class="techniques-box">
+                    <h4>Pour Over</h4>
+                    <p>Clean and bright. This method highlights the delicate floral and fruit notes of the bean.</p>
+                </div>
+                <div class="techniques-box">
+                    <h4>French Press</h4>
+                    <p>Heavy-bodied and bold. Uses a metal mesh to allow oils into the final cup.</p>
+                </div>
+            </div>
+
+            <div class="fun-facts">
+                <h3>Did you know?</h3>
+                <ul>
+                    <li>Coffee is actually a fruit; the beans are seeds of berries.</li>
+                    <li>Brazil grows about 1/3 of the world's coffee.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer-->
+    <footer class="footer">
+        © 2026 Ian Pallares | ITD 210 Project | Northern Virginia Community College | <a
+            href="mailto:ijp32337@email.vccs.edu" style="text-decoration: none; color: inherit;">Contact</a>
+    </footer>
+
+    <!-- Tiny JS for the mobile menu -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.getElementById('primary-nav');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('active');
+            // Update accessibility state
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    </script>
+</body>
+
+</html>

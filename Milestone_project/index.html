@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <!-- The name of the website can change on a future-->
+            <span class="brand">Still brew</span>
+
+            <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav id="primary-nav" aria-label="Main navigation">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item">About</a>
+                <a href="gallery.html" class="nav-item">Gallery</a>
+                <a href="media.html" class="nav-item">Media</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-title">Home Page</div>
+        <video autoplay loop muted playsinline class="hero-bg" src="videos/temporal example.mp4"></video>
+    </section>
+
+    <main>
+        <h2 class="reveal">Popular items</h2>
+        <section class="container-best-sellers">
+            <div class="card-item reveal">
+                <div class="card-image">
+                    <!-- I am not using "alt" for now because those are only examples, i am gonna create images with AI and replace the ones i have right now-->
+                    <img src="images/iced-coffee.png" alt="iced coffee beverage">
+                </div>
+                <div class="content">
+                    <h3>name</h3>
+                    <p>price</p>
+                </div>
+            </div>
+            <div class="card-item reveal">
+                <div class="card-image">
+                    <!-- I am not using "alt" for now because those are only examples, i am gonna create images with AI and replace the ones i have right now-->
+                    <img src="images/iced-coffee.png" alt="iced coffee beverage">
+                </div>
+                <div class="content">
+                    <h3>name</h3>
+                    <p>price</p>
+                </div>
+            </div>
+            <div class="card-item reveal">
+                <div class="card-image">
+                    <!-- I am not using "alt" for now because those are only examples, i am gonna create images with AI and replace the ones i have right now-->
+                    <img src="images/iced-coffee.png" alt="iced coffee beverage">
+                </div>
+                <div class="content">
+                    <h3>name</h3>
+                    <p>price</p>
+                </div>
+            </div>
+            <div class="card-item reveal">
+                <div class="card-image">
+                    <!-- I am not using "alt" for now because those are only examples, i am gonna create images with AI and replace the ones i have right now-->
+                    <img src="images/iced-coffee.png" alt="iced coffee beverage">
+                </div>
+                <div class="content">
+                    <h3>name</h3>
+                    <p>price</p>
+                </div>
+            </div>
+            <div class="card-item reveal">
+                <div class="card-image">
+                    <!-- I am not using "alt" for now because those are only examples, i am gonna create images with AI and replace the ones i have right now-->
+                    <img src="images/iced-coffee.png" alt="iced coffee beverage">
+                </div>
+                <div class="content">
+                    <h3>name</h3>
+                    <p>price</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="coffee-specials" class="reveal">
+            <h2>Our Special Menu</h2>
+
+            <button class="btn" id="loadBtn">Load Specials</button>
+
+            <p id="loadingMessage" style="display: none;">Loading...</p>
+            <p id="errorMessage"></p>
+
+            <div id="dataContainer">
+            </div>
+        </section>
+
+        <h2 class="reveal">Features</h2>
+        <section class="container-features reveal">
+            <div class="card-features menu">
+                <h3>Menu</h3>
+                <p>Click here to see our variety of delicious food and drink options</p>
+                <span>hoover here</span>
+                <div class="pic"></div>
+                <!-- Do not forget. Button tag acts as a decoration too-->
+                <button onclick="window.location.href='about.html';"></button>
+            </div>
+            <div class="card-features gallery">
+                <h3>Gallery</h3>
+                <p>A collection of different media about us</p>
+                <span>hoover here</span>
+                <div class="pic"></div>
+                <button onclick="window.location.href='gallery.html';"></button>
+            </div>
+            <div class="card-features productivity">
+                <h3>Productivity</h3>
+                <p>Tools to help you being productive</p>
+                <span>hoover here</span>
+                <div class="pic"></div>
+                <button onclick="window.location.href='media.html';"></button>
+            </div>
+            <div class="card-features contact">
+                <h3>Contact</h3>
+                <p>See our contact info and our current location</p>
+                <span>hoover here</span>
+                <div class="pic"></div>
+                <!-- I didn't know button tags could do this-->
+                <button onclick="window.location.href='contact.html';"></button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        © 2026 Ian Pallares | ITD 210 Project | Northern Virginia Community College | <a
+            href="mailto:ijp32337@email.vccs.edu" style="text-decoration: none; color: inherit;">Contact</a>
+    </footer>
+
+    <script>
+        function revealOnScroll() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 100;
+
+                if (elementTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", revealOnScroll);
+
+        revealOnScroll();
+    </script>
+
+    <script src="js/script.js"></script>
+    
+    <!-- Tiny JS for the mobile menu -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.getElementById('primary-nav');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('active');
+            // Update accessibility state
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    </script>
+</body>
+
+</html>

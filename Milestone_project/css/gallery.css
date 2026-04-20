@@ -68,6 +68,11 @@ nav a:hover {
     transition: color 0.5s ease, background-color 0.30s ease
 }
 
+@keyframes loadIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* Hamburger (hidden on desktop) */
 .menu-toggle {
     display: inline-block;
@@ -86,7 +91,17 @@ nav a:hover {
     transition: 0.3s;
 }
 
+/** reveal for animations on scroll **/
+.reveal {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.8s ease-out;
+}
 
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .gallery-section {
     padding: 4rem 1.25rem;
@@ -99,6 +114,10 @@ nav a:hover {
     background:
         linear-gradient(160deg, #2b1a0f 0%, #1a0d07 100%);
     padding: 4rem 1.25rem;
+}
+
+.section-title, .section-desc {
+    animation: loadIn 0.8s ease-out forwards;
 }
 
 .section--dark .section-label,
@@ -137,7 +156,7 @@ nav a:hover {
     border-radius: 1.25rem;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.42s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.42s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: transform 0.42s;
 }
 
 .card:hover {
@@ -145,13 +164,14 @@ nav a:hover {
     box-shadow: 0 24px 56px rgba(43, 26, 15, .22);
 }
 
-.card-img {
+.card img {
     width: 100%;
     height: 100%;
     min-height: 260px;
     background-size: cover;
     background-position: center;
     transition: transform 0.42s;
+    object-fit: cover;
 }
 
 .card:hover .card-img {
@@ -464,4 +484,20 @@ footer {
 footer a {
     text-decoration: none;
     color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    /* Make reveal elements visible immediately for accessibility */
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }

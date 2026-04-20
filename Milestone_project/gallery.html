@@ -42,12 +42,12 @@
                     as long as you need.</p>
             </div>
 
-            <div class="card-grid grid--atmosphere">
+            <div class="card-grid grid--atmosphere reveal">
 
                 <article class="card card--tall">
                     <div class="card-img">
                         <!-- I need to generate good images with AI-->
-                        <img src="images/example.jpg" alt="coffee cup on a table">
+                        <img src="images/windows.jpg" alt="cafe interior with large windows">
                     </div>
                     <div class="card-overlay">
                         <h3 class="card-name">Morning Light</h3>
@@ -58,7 +58,7 @@
 
                 <article class="card">
                     <div class="card-img">
-                        <img src="images/example.jpg" alt="coffee cup on a table">
+                        <img src="images/counter.jpg" alt="Cafe counter with coffee equipment">
                     </div>
                     <div class="card-overlay">
                         <h3 class="card-name">The Counter</h3>
@@ -69,7 +69,7 @@
 
                 <article class="card">
                     <div class="card-img">
-                        <img src="images/example.jpg" alt="coffee cup on a table">
+                        <img src="images/seats.jpg" alt="cafe seating area with plants">
                     </div>
                     <div class="card-overlay">
                         <h3 class="card-name">Work Nooks</h3>
@@ -82,7 +82,7 @@
         </section>
 
         <!-- SECTION 2 — BREW TECHNIQUES -->
-        <section class="gallery-section section--dark" id="brew">
+        <section class="gallery-section section--dark reveal" id="brew">
             <div class="section-label">
                 <h2 class="section-title">Brew Methods</h2>
                 <p class="section-desc">Every technique is chosen intentionally — each one unlocks a different soul of
@@ -93,7 +93,7 @@
 
                 <article class="card card--brew">
                     <div class="card-img">
-                        <img src="images/example.jpg" alt="Pour Over">
+                        <img src="images/pour-over.jpg" alt="Pour Over">
                     </div>
                     <div class="brew-badge">Pour Over</div>
                     <div class="card-overlay">
@@ -106,7 +106,7 @@
 
                 <article class="card card--brew">
                     <div class="card-img">
-                        <img src="images/example.jpg" alt="Cold Brew">
+                        <img src="images/Cold-brew.jpg" alt="Cold Brew">
                     </div>
                     <div class="brew-badge">Cold Brew</div>
                     <div class="card-overlay">
@@ -119,7 +119,7 @@
 
                 <article class="card card--brew">
                     <div class="card-img">
-                        <img src="images/example.jpg" alt="Espresso">
+                        <img src="images/espressojpg.jpg" alt="Espresso">
                     </div>
                     <div class="brew-badge">Espresso</div>
                     <div class="card-overlay">
@@ -132,7 +132,7 @@
 
                 <article class="card card--brew">
                     <div class="card-img">
-                        <img src="images/example.jpg" alt="AeroPress">
+                        <img src="images/aeropress.jpg" alt="AeroPress">
                     </div>
                     <div class="brew-badge">AeroPress</div>
                     <div class="card-overlay">
@@ -154,7 +154,7 @@
                 <p class="section-desc">Little wonders hidden inside every cup — did you know?</p>
             </div>
 
-            <div class="card-grid grid--facts">
+            <div class="card-grid grid--facts reveal">
 
                 <article class="card card--fact">
                     <h3 class="fact-title">Coffee Is a Fruit</h3>
@@ -198,6 +198,24 @@
                 href="mailto:ijp32337@email.vccs.edu" style="text-decoration: none; color: inherit;">Contact</a>
         </footer>
 
+        <script>
+        function revealOnScroll() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 100;
+
+                if (elementTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", revealOnScroll);
+
+        revealOnScroll();
+    </script>
         <!-- Tiny JS for the mobile menu -->
         <script>
             const menuToggle = document.querySelector('.menu-toggle');

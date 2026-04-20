@@ -144,7 +144,7 @@ footer {
     background: #3E2723;
     color: #FFFDF5;
     text-align: center;
-    padding: 1vw;
+    padding: 4vw;
     font-size: 12px;
     font-family: "Faculty Glyphic", sans-serif;
 }
@@ -152,4 +152,91 @@ footer {
 footer a {
     text-decoration: none;
     color: white;
+}
+
+/** Tablet and desktop **/
+@media (min-width: 600px) {
+
+    .brand {
+        font-size: 20px;
+    }
+    
+    /* Data section */
+
+    /* Footer */
+    footer {
+        background-color: #3E2723;
+        color: #FFFDF5;
+        text-align: center;
+        padding: 1vw;
+        font-size: 15px;
+        font-family: "Faculty Glyphic", sans-serif;
+    }
+}
+
+
+/* Desktop view */
+@media (min-width: 900px) {
+.menu-toggle {
+    display: none;
+}
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vw 2vw;
+        color: #3E2723;
+        background-color: white;
+    }
+    .brand {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    /* Desktop nav */
+    nav {
+        list-style: none;
+        display: flex;
+    }
+
+    nav a {
+        margin-left: 2vw;
+        color: #3E2723;
+        text-decoration: none;
+        font-family: "Faculty Glyphic", sans-serif;
+        font-size: 25px;
+        transition: color 0.25s ease;
+    }
+
+    .nav-item {
+        padding: 12px;
+    }
+
+    .hero-title {
+        font-size: 70px;
+    }
+
+    nav a:hover {
+        background-color: #869d7a;
+        border-radius: 8px;
+        transition: color 0.5s ease, background-color 0.30s ease
+    }
+    
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    /* Make reveal elements visible immediately for accessibility */
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }

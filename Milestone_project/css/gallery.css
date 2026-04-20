@@ -19,6 +19,7 @@ body {
     color: #3E2723;
     background-color: white;
 }
+
 .brand {
     font-size: 5vw;
     font-weight: bold;
@@ -41,8 +42,6 @@ body {
     border-bottom: 2px solid #3E2723;
     list-style: none;
 }
-
-/* I have been having problems with the first mobile approach due to the navbar, the error happened because i reused some code and i forgot to erase the things i didn't need more jajajajaja */
 
 #primary-nav.active a {
     display: block;
@@ -87,57 +86,371 @@ nav a:hover {
     transition: 0.3s;
 }
 
-/* new */
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 2vw;
+
+
+.gallery-section {
+    padding: 4rem 1.25rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.photo-card img {
+.section--dark {
+    max-width: 100%;
+    background:
+        linear-gradient(160deg, #2b1a0f 0%, #1a0d07 100%);
+    padding: 4rem 1.25rem;
+}
+
+.section--dark .section-label,
+.section--dark .section-title,
+.section--dark .section-desc {
+    color: #f5f0e8;
+}
+
+.section--dark {
+    color: #c8813a;
+}
+
+.section-label {
+    margin-bottom: 2.5rem;
+}
+
+.section-title {
+    font-family: "Faculty Glyphic", sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 700;
+    color: #3E2723;
+    margin-bottom: .5rem;
+}
+
+.section-desc {
+    font-size: .95rem;
+    font-weight: 300;
+    color: #3E2723;
+    max-width: 52ch;
+    line-height: 1.65;
+}
+
+
+.card {
+    position: relative;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.42s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.42s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 24px 56px rgba(43, 26, 15, .22);
+}
+
+.card-img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: 0.3s;
+    height: 100%;
+    min-height: 260px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.42s;
 }
 
-.photo-card img:hover {
-    filter: brightness(1.1);
-    transform: translateY(-5px);
+.card:hover .card-img {
+    transform: scale(1.06);
 }
 
-.brewing-techniques {
-    background-color: #9b746d;
-    color: #FFFDF5;
-    padding: 5vw;
-    margin-top: 4vw;
-}
-
-.techniques {
+.card-overlay {
+    position: absolute;
+    inset: 0;
     display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    background: linear-gradient(to top,
+            rgba(27, 13, 5, .88) 0%,
+            rgba(27, 13, 5, .35) 55%,
+            transparent 100%);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.42s, transform 0.42s;
 }
 
-.techniques-box {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
+.card:hover .card-overlay {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.fun-facts {
-    margin-top: 40px;
+.card-name {
+    font-family: "Faculty Glyphic", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: .35rem;
+}
+
+.card-detail {
+    font-size: .82rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, .82);
+    line-height: 1.55;
+}
+
+/*ATMOSPHERE */
+.grid--atmosphere {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    /* mobile: 1 col */
+}
+
+.card--tall {
+    aspect-ratio: 4/5;
+}
+
+.card--wide {
+    aspect-ratio: 16/7;
+}
+
+.card {
+    aspect-ratio: 4/3;
+}
+
+.card--tall .card-img,
+.card--wide .card-img,
+.card .card-img {
+    min-height: unset;
+    height: 100%;
+}
+
+/* tablet */
+@media (min-width: 640px) {
+    .brand {
+        font-size: 20px;
+    }
+    
+    /* Data section */
+
+    /* Footer */
+    footer {
+        background-color: #3E2723;
+        color: #FFFDF5;
+        text-align: center;
+        padding: 1vw;
+        font-size: 15px;
+    font-family: "Faculty Glyphic", sans-serif;
+    }
+
+    .grid--atmosphere {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card--tall {
+        grid-row: span 2;
+    }
+
+    .card--wide {
+        grid-column: span 2;
+    }
+}
+
+/* desktop */
+@media (min-width: 900px) {
+    .menu-toggle {
+    display: none;
+}
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vw 2vw;
+        color: #3E2723;
+        background-color: white;
+    }
+    .brand {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    /* Desktop nav */
+    nav {
+        list-style: none;
+        display: flex;
+    }
+
+    nav a {
+        margin-left: 2vw;
+        color: #3E2723;
+        text-decoration: none;
+        font-family: "Faculty Glyphic", sans-serif;
+        font-size: 25px;
+        transition: color 0.25s ease;
+    }
+
+    .nav-item {
+        padding: 12px;
+    }
+
+    .hero-title {
+        font-size: 70px;
+    }
+
+    nav a:hover {
+        background-color: #869d7a;
+        border-radius: 8px;
+        transition: color 0.5s ease, background-color 0.30s ease
+    }
+    .grid--atmosphere {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 280px 200px;
+    }
+
+    .card--tall {
+        grid-column: 1;
+        grid-row: span 2;
+    }
+
+    .card--wide {
+        grid-column: 2 / 4;
+        grid-row: 2;
+    }
+}
+
+/* GRID 2 — BREW METHODS */
+.grid--brew {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    .grid--brew {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .grid--brew {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card--brew {
+    aspect-ratio: 3/4;
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.card--brew .card-img {
+    height: 100%;
+    min-height: unset;
+}
+
+/* badge */
+.brew-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #c8813a;
+    color: #fff;
+    font-size: .68rem;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: .3rem .75rem;
+    border-radius: 2rem;
+    z-index: 2;
+    transition: background 0.42s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.card--brew:hover .brew-badge {
+    background: #869d7a;
+}
+
+.brew-tag {
+    display: inline-block;
+    margin-top: .6rem;
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .08em;
+    color: #c8813a;
+    text-transform: uppercase;
+}
+
+/* GRID 3 — FUN FACTS */
+.grid--facts {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+    .grid--facts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .grid--facts {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card--fact {
+    background: var(--parchment);
+    border: 1px solid #d6cec2;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    aspect-ratio: unset;
+    /* override base hover */
+    box-shadow: 0 2px 12px rgba(43, 26, 15, .06);
+}
+
+.card--fact:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 42px rgba(43, 26, 15, .14);
+    background: #fff;
+}
+
+.fact-title {
+    font-family: "Faculty Glyphic", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2b1a0f;
+}
+
+.fact-body {
+    font-size: .88rem;
+    font-weight: 300;
+    color: #5c3317;
+    line-height: 1.7;
+    flex: 1;
+}
+
+.fact-body em {
+    font-style: italic;
+    color: #c8813a;
+    font-weight: 500;
+}
+
+.card--fact:hover {
+    width: 100%;
+}
+
+/* FOOTER */
+.site-footer {
     text-align: center;
+    padding: 2.5rem 1rem;
+    border-top: 1px solid #d6cec2;
+    font-size: .8rem;
+    font-weight: 300;
+    letter-spacing: .08em;
+    color: #5c3317;
+    opacity: .7;
 }
 
-.fun-facts ul {
-    list-style: none;
-    padding: 0;
-}
 
 footer {
     background: #3E2723;

@@ -92,7 +92,7 @@ footer {
     background: #3E2723;
     color: #FFFDF5;
     text-align: center;
-    padding: 1vw;
+    padding: 4vw;
     font-size: 12px;
     font-family: "Faculty Glyphic", sans-serif;
 }
@@ -100,4 +100,235 @@ footer {
 footer a {
     text-decoration: none;
     color: white;
+}
+
+/** Tablet and desktop **/
+@media (min-width: 600px) {
+
+    .brand {
+        font-size: 20px;
+    }
+    
+    /* Data section */
+
+    /* Footer */
+    footer {
+        background-color: #3E2723;
+        color: #FFFDF5;
+        text-align: center;
+        padding: 1vw;
+        font-size: 15px;
+        font-family: "Faculty Glyphic", sans-serif;
+    }
+}
+
+
+/* Desktop view */
+@media (min-width: 900px) {
+.menu-toggle {
+    display: none;
+}
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vw 2vw;
+        color: #3E2723;
+        background-color: white;
+    }
+    .brand {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    /* Desktop nav */
+    nav {
+        list-style: none;
+        display: flex;
+    }
+
+    nav a {
+        margin-left: 2vw;
+        color: #3E2723;
+        text-decoration: none;
+        font-family: "Faculty Glyphic", sans-serif;
+        font-size: 25px;
+        transition: color 0.25s ease;
+    }
+
+    .nav-item {
+        padding: 12px;
+    }
+
+    .hero-title {
+        font-size: 70px;
+    }
+
+    nav a:hover {
+        background-color: #869d7a;
+        border-radius: 8px;
+        transition: color 0.5s ease, background-color 0.30s ease
+    }
+    
+    h2 {
+        font-size: 4rem;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .container-best-sellers {
+        justify-content: center;
+        gap: 1.5vw;
+    }
+
+    .btn {
+        width: 10vw;
+        height: 3vw;
+        font-size: 2rem;
+        border-radius: 0.5vw;
+    }
+ /* remember to fix the style of the "specials" */
+    .container-features {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    }
+
+    .container-features .card-features {
+        position: relative;
+        width: 30vw;
+        height: 18vw;
+        padding: 1vw;
+        background: linear-gradient(60deg, #2D1B18 0%, #744942 100%);
+        overflow: hidden;
+        margin-bottom: 1.5vw;
+        border-radius: 2vw;
+        box-shadow: 0 0 1.5vw rgba(175, 47, 47, 0.3);
+    }
+
+    .menu { grid-area: 1 / 2 / 3 / 4; }
+    .gallery { grid-area: 1 / 4 / 3 / 6; }
+    .productivity { grid-area: 3 / 2 / 5 / 4; }
+    .contact { grid-area: 3 / 4 / 5 / 6; }
+
+    .container-features .card-features h3 {
+    z-index: 99;
+    position: absolute;
+    bottom: 2.5vw;
+    right: 5vw;
+    font-size: 3vw;
+    font-weight: 700;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.2s ease;
+    text-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.5);
+}
+
+.container-features .card-features p {
+    z-index: 99;
+    position: absolute;
+    bottom: 3vw;
+    right: 13vw;
+    width: 17vw;
+    color: #fff;
+    opacity: 0;
+    font-size: 1.2vw;
+    text-align: right;
+    letter-spacing: 0.1vw;
+    transition: 0.2s ease;
+}
+
+/** I love these cards, but they are kind of hard to make. I still need to make them tinnier **/
+
+.container-features .card-features span {
+    z-index: 99;
+    position: absolute;
+    top: 3vw;
+    right: 1vw;
+    color: #fff;
+    font-size: 1.2vw;
+    letter-spacing: 0.1vw;
+    writing-mode: vertical-rl;
+    transition: 0.2s ease;
+    opacity: 0.7;
+}
+
+.container-features .card-features .pic {
+    z-index: 100;
+    width: 25.5vw;
+    height: 16vw;
+    background-size: cover;
+    border-radius: 1.2vw;
+    filter: grayscale(60%);
+    transition: 0.3s ease;
+}
+
+.container-features .card-features button {
+    position: absolute;
+    right: 0.75vw;
+    bottom: 1vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    background-color: #D4A373;
+    border: none;
+    border-radius: 3vw;
+    cursor: pointer;
+    outline: none;
+    opacity: 1;
+    transition: 0.3s ease;
+}
+
+.container-features .card-features:hover button {
+    transform: scale(16.5);
+    opacity: 0.5;
+}
+
+.container-features .card-features:hover h3 {
+    bottom: 8vw;
+    right: 5vw;
+}
+
+.container-features .card-features:hover p {
+    opacity: 1;
+    right: 6vw;
+}
+
+.container-features .card-features:hover span {
+    opacity: 0;
+    top: 8vw;
+}
+
+.container-features .card-features:hover .pic {
+    filter: grayscale(0);
+    width: 35vw;
+
+    /* Footer */
+    footer {
+        background-color: #3E2723;
+        color: #FFFDF5;
+        text-align: center;
+        padding: 1vw;
+        font-size: 20px;
+        font-family: "Faculty Glyphic", sans-serif;
+    }
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    /* Make reveal elements visible immediately for accessibility */
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }

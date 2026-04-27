@@ -1,0 +1,13 @@
+WEBVTT
+
+00:00.000 --> 00:06.000
+Your morning reset starts here. ☕
+
+00:07.000 --> 00:14.000
+Crafted with care, one pour at a time.
+
+00:15.000 --> 00:22.000
+Fresh pastries, warm atmosphere.
+
+00:23.000 --> 00:29.000
+Come visit us today.

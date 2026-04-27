@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFDF5;
+    overflow-x: hidden;
+}
+
+/** Navbar **/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 2vw;
+    color: #3E2723;
+    background-color: white;
+}
+.brand {
+    font-size: 5vw;
+    font-weight: bold;
+    font-family: "Faculty Glyphic", sans-serif;
+}
+
+/* Mobile nav */
+
+/*This is the nav for mobile devices */
+#primary-nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    z-index: 4;
+    border-bottom: 2px solid #3E2723;
+    list-style: none;
+}
+
+/* I have been having problems with the first mobile approach due to the navbar, the error happened because i reused some code and i forgot to erase the things i didn't need more jajajajaja */
+
+#primary-nav.active a {
+    display: block;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-family: "Faculty Glyphic", sans-serif;
+    /* Change the font later */
+    text-decoration: none;
+    color: #3E2723;
+}
+
+nav {
+    display: none;
+}
+
+
+.nav-item {
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: #869d7a;
+    border-radius: 8px;
+    transition: color 0.5s ease, background-color 0.30s ease
+}
+
+/* New */
+.about-intro {
+    padding: 5vw;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    color: #3E2723;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.full-menu {
+    background-color: #fdfaf0;
+    padding: 5vw;
+}
+
+.menu-category {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+
+.menu-category h3 {
+    color: #869d7a;
+    border-bottom: 2px solid #D4A373;
+    margin-bottom: 20px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 1.1rem;
+    color: #3E2723;
+}
+
+.menu-item hr {
+    flex-grow: 1;
+    border: none;
+    border-bottom: 1px dotted #D4A373;
+    margin: 0 10px;
+}
+
+/* Hamburger (hidden on desktop) */
+.menu-toggle {
+    display: inline-block;
+    background: transparent;
+    border: 0;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #3E2723;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+
+footer {
+    background: #3E2723;
+    color: #FFFDF5;
+    text-align: center;
+    padding: 4vw;
+    font-size: 12px;
+    font-family: "Faculty Glyphic", sans-serif;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+/** Tablet and desktop **/
+@media (min-width: 600px) {
+
+    .brand {
+        font-size: 20px;
+    }
+    
+    /* Data section */
+
+    /* Footer */
+    footer {
+        background-color: #3E2723;
+        color: #FFFDF5;
+        text-align: center;
+        padding: 1vw;
+        font-size: 15px;
+        font-family: "Faculty Glyphic", sans-serif;
+    }
+}
+
+
+/* Desktop view */
+@media (min-width: 900px) {
+.menu-toggle {
+    display: none;
+}
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vw 2vw;
+        color: #3E2723;
+        background-color: white;
+    }
+    .brand {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    /* Desktop nav */
+    nav {
+        list-style: none;
+        display: flex;
+    }
+
+    nav a {
+        margin-left: 2vw;
+        color: #3E2723;
+        text-decoration: none;
+        font-family: "Faculty Glyphic", sans-serif;
+        font-size: 25px;
+        transition: color 0.25s ease;
+    }
+
+    .nav-item {
+        padding: 12px;
+    }
+
+    .hero-title {
+        font-size: 70px;
+    }
+
+    nav a:hover {
+        background-color: #869d7a;
+        border-radius: 8px;
+        transition: color 0.5s ease, background-color 0.30s ease
+    }
+    
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    /* Make reveal elements visible immediately for accessibility */
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}

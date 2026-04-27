@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <!-- The name of the website can change on a future-->
+            <span class="brand">Still brew</span>
+
+            <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav id="primary-nav" aria-label="Main navigation">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item">About</a>
+                <a href="gallery.html" class="nav-item">Gallery</a>
+                <a href="media.html" class="nav-item">Media</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+<main>
+        <section class="about-intro">
+            <h2>Our Story</h2>
+            <div class="about-flex">
+                <div class="about-text">
+                    <p>Founded in 2026, our coffee shop was born out of a passion for high-quality beans and community. We believe every cup tells a story, from the soil of the high altitudes to the precision of the roast.</p>
+                    <p>Our mission is to provide a sanctuary for thinkers, creators, and coffee lovers alike.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- I need to add more content here, things like images and descriptions -->
+        <section class="full-menu">
+            <h2>The Menu</h2>
+            
+            <div class="menu-category">
+                <h3>Specialty Drinks</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><span>Caramel Macchiato</span><hr><span>$5.50</span></div>
+                    <div class="menu-item"><span>Flat White</span><hr><span>$4.75</span></div>
+                    <div class="menu-item"><span>Cold Brew Nitro</span><hr><span>$6.00</span></div>
+                    <div class="menu-item"><span>Matcha Latte</span><hr><span>$5.25</span></div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Sweet Treats</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><span>Almond Croissant</span><hr><span>$4.50</span></div>
+                    <div class="menu-item"><span>Espresso Brownie</span><hr><span>$3.75</span></div>
+                    <div class="menu-item"><span>Blueberry Muffin</span><hr><span>$4.00</span></div>
+                    <div class="menu-item"><span>New York Cheesecake</span><hr><span>$6.50</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer-->
+    <footer class="footer">
+        © 2026 Ian Pallares | ITD 210 Project | Northern Virginia Community College | <a
+            href="mailto:ijp32337@email.vccs.edu" style="text-decoration: none; color: inherit;">Contact</a>
+    </footer>
+    
+    <!-- Tiny JS for the mobile menu -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.getElementById('primary-nav');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('active');
+            // Update accessibility state
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    </script>
+</body>
+
+</html>

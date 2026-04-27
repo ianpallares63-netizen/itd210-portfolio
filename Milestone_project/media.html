@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <!-- The name of the website can change on a future-->
+            <span class="brand">Still brew</span>
+
+            <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav id="primary-nav" aria-label="Main navigation">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item">About</a>
+                <a href="gallery.html" class="nav-item">Gallery</a>
+                <a href="media.html" class="nav-item">Media</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="description">
+        <h1>Media</h1>
+        <p>Welcome to our media section! Here you can find all the latest news and updates.</p>
+    </section>
+
+    <main>
+        <section class="container-video">
+            <figure class="player">
+                <video id="video" poster="images/poster.jpg" playsinline>
+                    <source id="video-src" src="videos/temporal example.mp4" type="video/mp4">
+                    <!-- I am using this video bc i cant download videos from youtube and make a whole video with ai is hard-->
+                    <track id="track" kind="captions" label="English" src="coffee_shop_captions.txt" srclang="en" default>
+                </video>
+
+                <div class="controls">
+                    <button id="play-pause">Play</button>
+                    <button id="back-10">-10s</button>
+                    <input type="range" id="seek" value="0" min="0" step="0.1">
+                    <span id="time">00:00</span>
+                    <button id="fwd-10">+10s</button>
+                    <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                    <select id="speed">
+                        <option value="0.5">0.5x</option>
+                        <option value="1" selected>1x</option>
+                        <option value="1.5">1.5x</option>
+                        <option value="2">2x</option>
+                    </select>
+                    <button id="cc-toggle">CC</button>
+                    <button id="pip">PiP</button>
+                    <button id="fullscreen">[ ]</button>
+                </div>
+            </figure>
+        </section>
+
+        <section class="container-tools reveal">
+            <div class="card-tool pomodoro">
+                <h3>Pomodoro</h3>
+                <p>Use Our Focus Timer</p>
+                <span>hoover here</span>
+                <div class="pic"></div>
+                <button onclick="window.location.href='#panel-pomodoro';"></button>
+            </div>
+            <div class="card-tool garden">
+                <h3>Garden</h3>
+                <!-- I dont have the garden yet, i mean it is really hard and iu eve tried to use AI, but it doesnt look the way i wanted. I will add more features later like a music player that plays relaxing sounds-->
+                <p>Focus while growing your own garden</p>
+                <span>hoover here</span>
+                <div class="pic"></div>
+                <button onclick="window.location.href='gallery.html';"></button>
+            </div>
+        </section>
+
+        <!-- Pomodoro new-->
+        <!-- i have used AI for this pomodoro tool and i personalized removing and adding soem thigns -->
+        <section id="panel-pomodoro" class="panel active" role="tabpanel">
+            <div class="card-pomodoro reveal">
+                <p class="card-title">focus timer</p>
+                <p class="card-sub">deep work, one session at a time</p>
+
+                <div class="pomo-modes">
+                    <button class="mode-btn active" onclick="setMode(this, 'focus', 25, 'Focus')">25 min</button>
+                    <button class="mode-btn" onclick="setMode(this, 'short', 5, 'Short Break')">5 min</button>
+                    <button class="mode-btn" onclick="setMode(this, 'long', 15, 'Long Break')">15 min</button>
+                </div>
+
+                <div class="pomo-ring-wrap" aria-label="Timer ring">
+                    <svg width="168" height="168" viewBox="0 0 168 168">
+                        <circle class="pomo-ring-track" cx="84" cy="84" r="66" />
+                        <circle class="pomo-ring-fill" id="pomoRing" cx="84" cy="84" r="66" />
+                    </svg>
+                    <div class="pomo-center">
+                        <div class="pomo-time" id="pomoTime">25:00</div>
+                        <div class="pomo-mode-label" id="pomoLabel">Focus</div>
+                    </div>
+                </div>
+
+                <div class="pomo-info">
+                    <img src="https://png.pngtree.com/png-vector/20250327/ourmid/pngtree-assorted-coffee-cups-including-cappuccino-cup-with-heart-png-image_15878581.png" alt="cooffee cup icon">
+                    <p>did you know that cooffee can make you more alert?</p>
+                </div>
+
+                <div class="btn-row">
+                    <button class="btn-primary" id="pomoStartBtn" onclick="toggleTimer()">Start</button>
+                    <button class="btn-secondary" onclick="resetTimer()">Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="garden">
+
+        </section>
+    </main>
+    <!-- Footer-->
+    <footer class="footer">
+        © 2026 Ian Pallares | ITD 210 Project | Northern Virginia Community College | <a
+            href="mailto:ijp32337@email.vccs.edu" style="text-decoration: none; color: inherit;">Contact</a>
+    </footer>
+
+
+    <script>
+        function revealOnScroll() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 100;
+
+                if (elementTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", revealOnScroll);
+
+        revealOnScroll();
+    </script>
+
+    <script src="js/app.js"></script>
+    <script src="js/tools.js"></script>
+
+    <!-- Tiny JS for the mobile menu -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.getElementById('primary-nav');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('active');
+            // Update accessibility state
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    </script>
+</body>
+
+</html>

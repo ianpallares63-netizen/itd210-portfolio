@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+</head>
+<!-- I like how everything looks simple on mobile devices, but i feel it looks empty on desktop-->
+<body>
+    <header>
+        <div class="navbar">
+            <span class="brand">Still brew</span>
+
+            <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav id="primary-nav" aria-label="Main navigation">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item">About</a>
+                <a href="gallery.html" class="nav-item">Gallery</a>
+                <a href="media.html" class="nav-item">Media</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Due to time reasons i still need to add more things like entrance and loading animations -->
+    
+    <!-- for this webpage i tried a different organizaion i watch on tiktok-->
+
+    <main>
+        <section class="gallery-section" id="atmosphere">
+            <div class="section-label">
+                <h2 class="section-title">The Space</h2>
+                <p class="section-desc">Warm corners, natural light, and the quiet hum of focus. Come as you are; stay
+                    as long as you need.</p>
+            </div>
+
+            <div class="card-grid grid--atmosphere reveal">
+
+                <article class="card card--tall">
+                    <div class="card-img">
+                        <!-- I need to generate good images with AI-->
+                        <img src="images/windows.jpg" alt="cafe interior with large windows">
+                    </div>
+                    <div class="card-overlay">
+                        <h3 class="card-name">Morning Light</h3>
+                        <p class="card-detail">East-facing windows flood the room at dawn — the best seat in the house.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img">
+                        <img src="images/counter.jpg" alt="Cafe counter with coffee equipment">
+                    </div>
+                    <div class="card-overlay">
+                        <h3 class="card-name">The Counter</h3>
+                        <p class="card-detail">Handmade ceramic mugs, reclaimed oak shelves, and the gentle sound of
+                            grinding beans.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img">
+                        <img src="images/seats.jpg" alt="cafe seating area with plants">
+                    </div>
+                    <div class="card-overlay">
+                        <h3 class="card-name">Work Nooks</h3>
+                        <p class="card-detail">Power outlets at every seat, calm playlists, and zero pressure to leave.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECTION 2 — BREW TECHNIQUES -->
+        <section class="gallery-section section--dark reveal" id="brew">
+            <div class="section-label">
+                <h2 class="section-title">Brew Methods</h2>
+                <p class="section-desc">Every technique is chosen intentionally — each one unlocks a different soul of
+                    the same bean.</p>
+            </div>
+
+            <div class="card-grid grid--brew">
+
+                <article class="card card--brew">
+                    <div class="card-img">
+                        <img src="images/pour-over.jpg" alt="Pour Over">
+                    </div>
+                    <div class="brew-badge">Pour Over</div>
+                    <div class="card-overlay">
+                        <h3 class="card-name">Pour Over</h3>
+                        <p class="card-detail">A slow, intentional pour coaxes clarity and brightness — ideal for
+                            single-origin light roasts.</p>
+                        <span class="brew-tag">4 min brew · 93 °C</span>
+                    </div>
+                </article>
+
+                <article class="card card--brew">
+                    <div class="card-img">
+                        <img src="images/Cold-brew.jpg" alt="Cold Brew">
+                    </div>
+                    <div class="brew-badge">Cold Brew</div>
+                    <div class="card-overlay">
+                        <h3 class="card-name">Cold Brew</h3>
+                        <p class="card-detail">Steeped for 18 hours in cold water. Smooth, chocolatey, and naturally
+                            low-acid.</p>
+                        <span class="brew-tag">18 hr steep · 4 °C</span>
+                    </div>
+                </article>
+
+                <article class="card card--brew">
+                    <div class="card-img">
+                        <img src="images/espressojpg.jpg" alt="Espresso">
+                    </div>
+                    <div class="brew-badge">Espresso</div>
+                    <div class="card-overlay">
+                        <h3 class="card-name">Espresso</h3>
+                        <p class="card-detail">Nine bars of pressure, 25 seconds of extraction — the concentrated heart
+                            of every craft drink.</p>
+                        <span class="brew-tag">25 sec · 9 bar</span>
+                    </div>
+                </article>
+
+                <article class="card card--brew">
+                    <div class="card-img">
+                        <img src="images/aeropress.jpg" alt="AeroPress">
+                    </div>
+                    <div class="brew-badge">AeroPress</div>
+                    <div class="card-overlay">
+                        <h3 class="card-name">AeroPress</h3>
+                        <p class="card-detail">Versatile and forgiving — our baristas use it to chase bold,
+                            espresso-style shots tableside.</p>
+                        <span class="brew-tag">2 min · variable</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- I need to enhance the cards and add more space  between each-->
+
+        <!-- FUN FACTS -->
+
+        <section class="gallery-section" id="facts">
+                <h2 class="section-title">Coffee Curiosities</h2>
+                <p class="section-desc">Little wonders hidden inside every cup — did you know?</p>
+            </div>
+
+            <div class="card-grid grid--facts reveal">
+
+                <article class="card card--fact">
+                    <h3 class="fact-title">Coffee Is a Fruit</h3>
+                    <p class="fact-body">Coffee beans are actually the seeds of a cherry-like fruit. The ripe red or
+                        yellow cherries are harvested, and the bean sits at the center — technically making your morning
+                        cup a fruit juice.</p>
+                    <div class="fact-line"></div>
+                </article>
+
+                <article class="card card--fact">
+                    <h3 class="fact-title">The World's Second Trade</h3>
+                    <p class="fact-body">Coffee is the second most traded commodity on Earth, after crude oil. Over 2.25
+                        billion cups are consumed every single day worldwide — a ritual shared across nearly every
+                        culture.</p>
+                    <div class="fact-line"></div>
+                </article>
+
+                <article class="card card--fact">
+                    <h3 class="fact-title">Discovered by a Goat</h3>
+                    <p class="fact-body">Legend says a 9th-century Ethiopian goat herder named Kaldi noticed his goats
+                        dancing energetically after eating red berries. Curious monks brewed the berries into a drink —
+                        and coffee was born.</p>
+                    <div class="fact-line"></div>
+                </article>
+                
+                <!-- I have used AI for filing the text on the cards-->
+
+                <article class="card card--fact">
+                    <h3 class="fact-title">Roast ≠ Caffeine</h3>
+                    <p class="fact-body">Contrary to popular belief, darker roasts have slightly <em>less</em> caffeine
+                        than light roasts. The longer roasting process breaks down caffeine molecules — so our gentle
+                        light roasts pack the real punch.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="footer">
+            © 2026 Ian Pallares | ITD 210 Project | Northern Virginia Community College | <a
+                href="mailto:ijp32337@email.vccs.edu" style="text-decoration: none; color: inherit;">Contact</a>
+        </footer>
+
+        <script>
+        function revealOnScroll() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 100;
+
+                if (elementTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", revealOnScroll);
+
+        revealOnScroll();
+    </script>
+        <!-- Tiny JS for the mobile menu -->
+        <script>
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.getElementById('primary-nav');
+
+            menuToggle.addEventListener('click', () => {
+                const isOpen = nav.classList.toggle('active');
+                // Update accessibility state
+                menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+        </script>
+</body>
+
+</html>

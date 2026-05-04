@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+    <script src="js/form.js"></script>
 </head>
+
 <body>
     <header>
         <div class="navbar">
@@ -31,17 +33,19 @@
     </header>
     <section class="hero">
         <div class="hero-title">About Us</div>
-        <video autoplay loop muted playsinline class="hero-bg" src="videos/YTDown.com_YouTube_Media_0jIeCAOkgcQ_001_1080p.mp4"></video>
+        <video autoplay loop muted playsinline class="hero-bg"
+            src="videos/YTDown.com_YouTube_Media_0jIeCAOkgcQ_001_1080p.mp4"></video>
     </section>
-    
+
     <!-- About us: This section is used to create familiarity and reliability through our values and mission-->
-    <section class="us">
+    <section class="us reveal">
         <div class="div1">
             <img src="images/coffee.jpg" alt="hands holding a hot cup of coffee">
         </div>
         <div class="div2">
             <h2>Our Mission</h2>
-            <p>We provide a seamless sanctuary by leading with our core values. Our goal is to offer the best service around to protect your peace of mind.</p>
+            <p>We provide a seamless sanctuary by leading with our core values. Our goal is to offer the best service
+                around to protect your peace of mind.</p>
         </div>
         <div class="div3">
             <h3>Deep Focus</h3>
@@ -56,19 +60,21 @@
             <p>Seamless service that anticipates your needs.</p>
         </div>
         <div class="div6">
-            <h2>"To do good work one must eat well, be well housed, have one's fling from time to time, smoke one's pipe, and drink one's coffee in peace"</h2>
+            <h2>"To do good work one must eat well, be well housed, have one's fling from time to time, smoke one's
+                pipe, and drink one's coffee in peace"</h2>
             <h3>- Vincent Van Gogh</h3>
         </div>
         <div class="div7">
             <h3>Our Story</h3>
         </div>
         <div class="div8">
-            <p>We began as a quiet coffee corner in a busy office. Now, we have our own local space dedicated to providing that same refuge to the community.</p>
+            <p>We began as a quiet coffee corner in a busy office. Now, we have our own local space dedicated to
+                providing that same refuge to the community.</p>
         </div>
     </section>
 
     <!-- Data section: This section is used to reinforce reliability through data-->
-    <section class="data">
+    <section class="data reveal">
         <div class="data1">
             <h2>48-Hour Roast</h2>
         </div>
@@ -81,19 +87,148 @@
     </section>
 
     <!-- Start section: I am using this section to invite people to the coffee-->
-    <section class="beginning">
+    <section class="beginning reveal">
         <div class="info1">
             <h3>Visit Us</h3>
-            <p>Your favorite quiet nook and a fresh brew are waiting. Stop by to experience a workspace designed entirely for your comfort.</p>
+            <p>Your favorite quiet nook and a fresh brew are waiting. Stop by to experience a workspace designed
+                entirely for your comfort.</p>
         </div>
         <div class="info2">
             <img src="images/coffee-worker.jpeg" alt="coffee worker brewing a cup of coffee and enjoining his job">
         </div>
     </section>
 
+    <!-- form -->
+    <!-- I just made a simple contact form, I didn't want to complicate myself -->
+    <header class="header reveal">
+        <h1>We'd love to hear from you.</h1>
+    </header>
+
+    <div class="main-layout reveal">
+        <div class="form-card">
+
+            <div id="error-summary" style="display: none;" role="alert" aria-live="polite" tabindex="-1">
+                <p>Please fix the following errors:</p>
+                <ul id="error-summary-list"></ul>
+            </div>
+
+            <div id="form-wrapper">
+                <form id="contact-form" novalidate>
+                    <div class="form-field">
+                        <label for="name">Your name *</label>
+                        <input type="text" id="name" placeholder="Clara Whitmore" required
+                            aria-describedby="name-error" />
+                        <p id="name-error" class="error-msg" style="display: none;" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email address *</label>
+                        <input type="email" id="email" placeholder="you@example.com" required
+                            aria-describedby="email-error" />
+                        <p id="email-error" class="error-msg" style="display: none;" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" placeholder="Reservation, menu question, etc." required
+                            aria-describedby="subject-error" />
+                        <p id="subject-error" class="error-msg" style="display: none;" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="message">Your message *</label>
+                        <textarea id="message" rows="5" placeholder="Tell us what's on your mind..." required
+                            aria-describedby="char-counter message-error"></textarea>
+                        <p id="char-counter">0 / 500 characters</p>
+                        <p id="message-error" class="error-msg" style="display: none;" aria-live="polite"></p>
+                    </div>
+
+                    <button type="submit">Send your message</button>
+                </form>
+            </div>
+
+            <div id="success-card" style="display: none;" tabindex="-1" role="status">
+                <h2>Message received!</h2>
+                <p>Thank you for reaching out. We'll write back within a day.</p>
+            </div>
+        </div>
+
+        <aside>
+            <div class="sidebar-section">
+                <button id="hours-toggle" aria-expanded="false" aria-controls="hours-panel">See our schedule</button>
+                <div id="hours-panel" style="display: none;" role="region">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Monday – Friday</td>
+                                <td>7:30 am – 8 pm</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>8 am – 9 pm</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>9 am – 6 pm</td>
+                            </tr>
+                            <tr>
+                                <td>Public holidays</td>
+                                <td>10 am – 5 pm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Quick questions</h3>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-btn-1" aria-expanded="false" aria-controls="faq-1"
+                        tabindex="0">
+                        Do you take reservations?
+                    </button>
+                    <div id="faq-1" class="faq-answer" style="display: none;" role="region" aria-labelledby="faq-btn-1">
+                        Walk-ins are welcome. For six or more people, drop us a message.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-btn-2" aria-expanded="false" aria-controls="faq-2"
+                        tabindex="0">
+                        Is there Wi-Fi for working?
+                    </button>
+                    <div id="faq-2" class="faq-answer" style="display: none;" role="region" aria-labelledby="faq-btn-2">
+                        Yes, we have fast Wi-Fi and power outlets near the windows.
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+
     <footer class="footer">
-        © 2026 Ian Pallares | ITD 210 Project | Northern Virginia Community College | <a href="mailto:ijp32337@email.vccs.edu" style="text-decoration: none;">Contact</a>
+        © 2026 Ian Pallares | ITD 210 Project | Northern Virginia Community College | <a
+            href="mailto:ijp32337@email.vccs.edu" style="text-decoration: none;">Contact</a>
     </footer>
+
+    <script>
+        function revealOnScroll() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 100;
+
+                if (elementTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", revealOnScroll);
+
+        revealOnScroll();
+    </script>
 
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
@@ -106,4 +241,5 @@
         });
     </script>
 </body>
+
 </html>

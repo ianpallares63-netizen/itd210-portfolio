@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="navbar">
@@ -38,68 +39,63 @@
         <section class="container-best-sellers">
             <div class="card-item reveal">
                 <div class="card-image">
-                    <!-- I am not using "alt" for now because those are only examples, i am gonna create images with AI and replace the ones i have right now-->
-                    <img src="images/iced-coffee.png" alt="iced coffee beverage">
+                    <img src="images/espresso.webp" alt="espresso cup of coffee">
                 </div>
                 <div class="content">
-                    <h3>name</h3>
-                    <p>price</p>
+                    <h3>Espresso</h3>
+                    <p>$2.75</p>
                 </div>
             </div>
             <div class="card-item reveal">
                 <div class="card-image">
-                    <!-- I am not using "alt" for now because those are only examples, i am gonna create images with AI and replace the ones i have right now-->
-                    <img src="images/iced-coffee.png" alt="iced coffee beverage">
+                    <img src="images/americano.webp" alt="americano cup of coffee">
                 </div>
                 <div class="content">
-                    <h3>name</h3>
-                    <p>price</p>
+                    <h3>Americano</h3>
+                    <p>$3.25</p>
                 </div>
             </div>
             <div class="card-item reveal">
                 <div class="card-image">
-                    <!-- I am not using "alt" for now because those are only examples, i am gonna create images with AI and replace the ones i have right now-->
-                    <img src="images/iced-coffee.png" alt="iced coffee beverage">
+                    <img src="images/latte.webp" alt="latte cup of coffee">
                 </div>
                 <div class="content">
-                    <h3>name</h3>
-                    <p>price</p>
+                    <h3>Latte</h3>
+                    <p>$4.50</p>
                 </div>
             </div>
             <div class="card-item reveal">
                 <div class="card-image">
-                    <!-- I am not using "alt" for now because those are only examples, i am gonna create images with AI and replace the ones i have right now-->
-                    <img src="images/iced-coffee.png" alt="iced coffee beverage">
+                    <img src="images/cappuccino.webp" alt="cappuchino cup of coffee">
                 </div>
                 <div class="content">
-                    <h3>name</h3>
-                    <p>price</p>
+                    <h3>Cappuccino</h3>
+                    <p>$4.25</p>
                 </div>
             </div>
             <div class="card-item reveal">
                 <div class="card-image">
-                    <!-- I am not using "alt" for now because those are only examples, i am gonna create images with AI and replace the ones i have right now-->
-                    <img src="images/iced-coffee.png" alt="iced coffee beverage">
+                    <img src="images/macchiato.webp" alt="machiato cup of coffee">
                 </div>
                 <div class="content">
-                    <h3>name</h3>
-                    <p>price</p>
+                    <h3>Macchiato</h3>
+                    <p>$3.75</p>
                 </div>
             </div>
         </section>
 
-
         <section id="coffee-specials" class="reveal">
-            <h2>Our Special Menu</h2>
+            <h2>Our Specials</h2>
 
-            <button class="btn" id="loadBtn">Load Specials</button>
+            <div class="specials-action">
+                <button class="btn" id="loadBtn">Load Specials</button>
+            </div>
 
             <p id="loadingMessage" style="display: none;">Loading...</p>
             <p id="errorMessage"></p>
-
-            <div id="dataContainer">
-            </div>
+            <div id="dataContainer" class="specials-track"></div>
         </section>
+
 
         <h2 class="reveal">Features</h2>
         <section class="container-features reveal">
@@ -108,7 +104,6 @@
                 <p>Click here to see our variety of delicious food and drink options</p>
                 <span>hoover here</span>
                 <div class="pic"></div>
-                <!-- Do not forget. Button tag acts as a decoration too-->
                 <button onclick="window.location.href='about.html';"></button>
             </div>
             <div class="card-features gallery">
@@ -130,7 +125,6 @@
                 <p>See our contact info and our current location</p>
                 <span>hoover here</span>
                 <div class="pic"></div>
-                <!-- I didn't know button tags could do this-->
                 <button onclick="window.location.href='contact.html';"></button>
             </div>
         </section>
@@ -161,7 +155,7 @@
     </script>
 
     <script src="js/script.js"></script>
-    
+
     <!-- Tiny JS for the mobile menu -->
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
